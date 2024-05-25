@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //JSON.parse() 
+        document.write("JSON ობიექტს გააჩნია ორი ძირითადი მეთოდი: <b>JSON.parse()</b> და  <b>JSON.stringify()</b>" + "<br>")
+        document.write("<b>JSON.parse()</b> მეთოდი აანალიზებს სტრინგს და გარდაქმნის მას ობიექტად." + "<br>"+ "<br>");
+        document.write("სინტაქსი: JSON.parse(ტექსტი[მნიშვნელობა])" + "<br>")
+        document.write("1. ის იღებს JSON ფორმატირებულ ტექსტს ინფუთის სახით." +"<br>" + "2. გააანალიზებს სტრინგს რომ შექმნას და დააბრუნოს ის ახალი ჯავასკრიპტ ობიექტის სახით." +"<br>" + "3. თუ მოცემულია 'მნიშვნელობა', ის შეიძლება გამოვიყენოთ მიღებული ობიექტის გარდაქმნისთვის, ობიექტში მოცემული key/value პრინციპის გამოყენებით." + "<br>"+ "<br>")
+        document.write("<b>const jsonString =</b>" +"{<b>key:value,</b>" + "<br>" +"name" + ":" + "John," + "<br>",   "age"+ ":" + "30," + "<br>", "city"+ ":" +"New York,}" + "<br>" + "<br>");
+        document.write("<b>const jsonObject = JSON.parse(jsonString) </b>" +"<br>"+"<br>")
+        document.write("console.log(<b>jsonObject.name</b>);" +"<br>" +
+        "console.log(<b>jsonObject.age</b>);"  + "<br>" +
+        "console.log(<b>jsonObject.city</b>);" +"<br>" + "<br>" +"<br>" + "<br>");
+
+        // JSON.stringify()
+        document.write("<b>JSON.stringify()</b> მეთოდი ჯავასკრიპტ ობიექტს ან მნიშვნელობას გარდაქმნის სტრინგად."+ "<br>"+ "<br>");
+        document.write("სინტაქსი: JSON.stringify(მნიშვნელობა[, შემცვლელი[, სივრცე]])" +"<br>")
+        document.write("1. მნიშვნელობა აუცილებლად მისათითებელლია, რომ შემდეგ გადაკეთდეს სტრინგად"+"<br>" + "2. შემცვლელი შეგვიძლია მივუთითოთ. ის არის ფუნქცია, რომელსაც შეუძლია გარდაქმნას ობიექტი ან მასივი." +"<br>"+"3. სივრცე სურვილისამებრს შეგვიძლია გამოვიყენოთ, როგორც სტრინგის (მაქსიმუმ 10 სიმბოლო) ასევე ციფრების სახით (0-10–მდე)." +" <br>" +" <br>");
+      
+        document.write(
+        "var obj = { \"name\":\"John\", \"age\":\"39\", \"city\":\"New York\" };" +"<br>" +
+        "var text = JSON.stringify(obj, function (key, value) {" +"<br>"+
+            "if (key == \"city\") {" +"<br>"+
+            "return value.toUpperCase();" +"<br>"+
+            "} else {"+"<br>" +
+            "return value;"
+            ,"});" 
+            );
+    </script>
+</body>
+</html>
